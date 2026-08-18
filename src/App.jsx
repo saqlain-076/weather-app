@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SearchBar from './components/SearchBar'
 import WeatherCard from './components/WeatherCard'
+import Clock from './components/Clock'
 
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY
 
@@ -35,17 +36,29 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h1>Weather App</h1>
+        <h1>Weather Pro</h1>
+        <p className="subtitle">Get real-time weather information for any city worldwide</p>
+        <Clock />
       </header>
       <main>
         <SearchBar onSearch={fetchWeather} />
 
-        {loading && <div className="info">Loading...</div>}
-        {error && <div className="error">{error}</div>}
+        {loading && (
+          <div className="info">
+            🌤️ Getting weather data...
+          </div>
+        )}
+        
+        {error && (
+          <div className="error">
+            ❌ {error}
+          </div>
+        )}
+        
         {weather && <WeatherCard data={weather} />}
 
         <footer>
-          <small>Powered by OpenWeatherMap</small>
+          <small>Powered by OpenWeatherMap API • Made with ❤️</small>
         </footer>
       </main>
     </div>

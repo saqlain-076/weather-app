@@ -13,11 +13,13 @@ export default function SearchBar({ onSearch }) {
     <form className="search" onSubmit={submit}>
       <input
         aria-label="City"
-        placeholder="Search city (e.g. London)"
+        placeholder="🌍 Enter city name (e.g. London, New York, Karachi)"
         value={q}
         onChange={(e) => setQ(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button type="submit">
+        🔍 Search Weather
+      </button>
     </form>
   )
 }
