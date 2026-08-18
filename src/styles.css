@@ -1,0 +1,24 @@
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:linear-gradient(180deg,#e6f2ff,#ffffff);min-height:100vh}
+.app{max-width:720px;margin:36px auto;padding:16px}
+header h1{text-align:center;margin:0 0 18px}
+.search{display:flex;gap:8px;margin:0 0 16px}
+.search input{flex:1;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px}
+.search button{padding:10px 14px;border:none;background:#2563eb;color:#fff;border-radius:8px;cursor:pointer}
+.info{padding:12px;background:#fff;border-radius:8px;text-align:center}
+.error{padding:12px;background:#fee2e2;border:1px solid #fecaca;color:#b91c1c;border-radius:8px;text-align:center}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.card-header{display:flex;justify-content:space-between;align-items:center}
+.card-header h2{margin:0}
+.card-header .desc{margin:4px 0 0;color:#64748b}
+.card-body{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.temp{font-size:48px;font-weight:700}
+.meta{color:#475569}
+footer{margin-top:18px;text-align:center;color:#64748b}
+
+@media (max-width:520px){
+  .temp{font-size:36px}
+  .search{flex-direction:column}
+  .search button{width:100%}
+  .card-body{flex-direction:column;align-items:flex-start;gap:12px}
+}
